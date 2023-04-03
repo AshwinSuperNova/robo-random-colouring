@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>paint</title>
+  <style>
+#colorpick{
+  position: relative;
+    background-color:#f613a7;
+    height: 590px;
+    width:550px;
+    margin-left: 10cm;
+    border-radius: 10px;
+    margin-bottom: 5cm;
+    margin-right:10cm ;
+
+
+}
+div.body{
+position:absolute;
+  top:200px;
+  left:160px;
+  background:#f61313;
+    height: 200px;
+    border-style: solid;
+    border-color: azure;
+    border-width: 5px;
+    width:200px;
+    margin-left: 0px;
+    border-radius: 10px;
+    margin-bottom:0px;
+    margin-right:10cm ;
+z-index: 6;
+
+
+  
+}
+div.head{
+position:absolute;
+  top:90px;
+  left:208px;
+  
+  background:#f61313;
+    height: 100px;
+    width:100px;
+   
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-style: solid;
+    border-color: azure;
+    border-width: 5px;
+    
+    margin-right:10cm ;
+    z-index: 3;
+
+
+
+  
+}
+div.leg1{
+
+
+
+ display: flex;
+ flex-direction: row;
+
+
+}
+div.leg2{
+
+position:relative;
+bottom:420px;
+left:555px;
+border-radius: 10px;
+
+background:#f61313;
+  height: 160px;
+  width:50px;
+ 
+
+  border-style: solid;
+  border-color: rgb(243, 244, 244);
+  border-width: 5px;
+  
+  margin-right:1.5cm ;
+  z-index: 3;
+
+
+}
+div.leg3{
+
+position:relative;
+bottom:420px;
+left:555px;
+border-radius: 10px;
+
+background:#f61313;
+  height: 160px;
+  width:50px;
+ 
+
+  border-style: solid;
+  border-color: rgb(243, 244, 244);
+  border-width: 5px;
+  
+  margin-right:1.5cm ;
+  z-index: 3;
+
+
+}
+div.submit{
+position: relative;
+bottom:530px;
+left:610px;
+height:800px;
+width:80px;
+font-size: 20px;
+font-weight:10px;
+
+
+
+}
+div.hand{
+display:flex;
+flex-direction: row;
+
+
+}
+div.hand1{
+  position:relative;
+bottom:756px;
+left:469px;
+transform: rotate(30deg);
+
+background:#371313;
+  height: 160px;
+  width:50px;
+ 
+border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(243, 244, 244);
+  border-width: 5px;
+  
+  margin-right:3.8cm ;
+  z-index: 3;
+
+
+}
+div.hand2{
+  position:relative;
+bottom:756px;
+left:555px;
+transform: rotate(-30deg);
+background:#1e1010;
+  height: 160px;
+  width:50px;
+  border-radius: 10px;
+
+  border-style: solid;
+  border-color: rgb(243, 244, 244);
+  border-width: 5px;
+  
+ 
+  z-index: 3;
+
+}
+div.eyes{
+display:flex;
+flex-direction: row;
+
+
+}
+div.eyes1{
+  position:relative;
+bottom:1000px;
+left:650px;
+
+background:#f30909;
+  height: 15px;
+  width:15px;
+  border-radius: 15px;
+
+  border-style: solid;
+  border-color: rgb(243, 244, 244);
+  border-width: 5px;
+  
+ 
+  z-index: 19;
+
+  
+}
+div.eyes2{
+  position:relative;
+  bottom:1000px;
+left:579px;
+
+background:#f50c0c;
+height: 15px;
+  width:15px;
+  border-radius: 15px;
+
+  border-style: solid;
+  border-color: rgb(243, 244, 244);
+  border-width: 5px;
+  
+ 
+  z-index: 19;
+
+  
+}
+div.smile{
+  position: relative;
+  bottom:980px;
+  left:615px;
+  height:20px;
+  width:50px;
+  background-color: rgb(6, 10, 13);
+  border-radius: 10px;
+  border-style: solid;
+  z-index: 54;
+  border-color: #e7e7e7;
+
+}
+
+  </style>
+
+
+
+</head>
+
+<body>
+  <h1>robo-painting</h1>
+  <div  id="colorpick">
+    
+    <div class="head"></div>
+
+<div class="body"></div>
+
+
+
+
+
+
+
+  </div>
+
+  <div class="leg1" id="leg1">
+    <div class="leg2"></div>
+    <div class="leg2" id="leg2"></div>
+  </div>
+  <div class="hand" id="leg1">
+    <div class="hand1"></div>
+    <div class="hand2"></div>
+  </div>
+  <div class="eyes" >
+    <div class="eyes1"></div>
+    <div class="eyes2"></div>
+  </div>
+  <div class="smile">
+    <span style="font-size:5px;"></span>
+  </div>
+ <div class="submit">
+  <button onclick="makeRandomColor()" style="background-color: #e7e7e7; color: black; font-size:20px;">change</button>  
+ </div>
+    
+ 
+  <script  type='text/javascript'>
+    
+
+   function makeRandomColor(){
+
+    var x=Math.floor(Math.random() * 256);
+    var y=Math.floor(Math.random() * 256);
+    var z=Math.floor(Math.random() * 256);
+    var bgcolor=`rgb(${x},${y},${z});`;
+    var a=Math.floor(Math.random() * 256);
+    var b=Math.floor(Math.random() * 256);
+    var c=Math.floor(Math.random() * 256);
+    var bgcolor1=`rgb(${a},${b},${c});`;
+    var d=Math.floor(Math.random() * 256);
+    var e=Math.floor(Math.random() * 256);
+    var f=Math.floor(Math.random() * 256);
+    var bgcolor2=`rgb(${d},${e},${f});`;
+    var g=Math.floor(Math.random() * 256);
+    var h=Math.floor(Math.random() * 256);
+    var i=Math.floor(Math.random() * 256);
+    var bgcolor3=`rgb(${g},${h},${i});`;
+    var bgcolor4=`rgb(${h},${i},${g});`;
+    var bgcolor5=`rgb(${c},${b},${f});`;
+    document.querySelector(".head").setAttribute("style",`background-color: ${bgcolor}`);
+    document.querySelector(".body").setAttribute("style",`background-color: ${bgcolor1}`);
+    document.getElementById("colorpick").setAttribute("style",`background-color: ${bgcolor2}`);
+    document.querySelector(".leg2").setAttribute("style",`background-color: ${bgcolor3}`);
+    document.querySelector(".hand2").setAttribute("style",`background-color: ${bgcolor5}`);
+    document.querySelector(".hand1").setAttribute("style",`background-color: ${bgcolor5}`);
+    document.getElementById("leg2").setAttribute("style",`background-color: ${bgcolor4}`);
+
+}
+   
+
+  </script>
+</body>
+</html>
